@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+    <img src="{% static 'portfolio/pic.jpg' %}" class="img-thumbnail">
+  <h1 class="display-4" id="home">Nick Walter is Commander-in-Chief at ZappyCode and lives in Downtown Tokyo 😊</h1>
+</div>
+
+<h2 class="display-5">Portfolio</h2>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4">
+    <div class="card-deck">
+      <div class="card">
+        <img src="{{ project.image.url }}" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title">{{ project.title }}</h3>
+          <p class="card-text">{{ project.description }}</p>
+          {% if project.url %}
+            <a href="#" class="btn btn-success">URl</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
