@@ -1,5 +1,5 @@
 asgiref==3.2.7
 -e git+https://github.com/django/django.git@18eb852874a073001cb509f64002b6d82bdc760b#egg=Django
-Pillow==7.1.2
+Pillow==8.1.1
 pytz==2020.1
 sqlparse==0.3.1
